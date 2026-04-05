@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+/* Definindo algumas cores padrão que vi no seu design */
+@theme {
+  --color-fundo: #05080f;
+  --color-card: #0a0f16;
+}
+
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Adicione no final do index.css */
+@keyframes slideUp {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
